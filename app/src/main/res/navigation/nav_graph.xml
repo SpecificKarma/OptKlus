@@ -3,33 +3,42 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/cards"
+    app:startDestination="@id/main"
     tools:ignore="UnusedNavigation">
 
     <fragment
-        android:id="@+id/cards"
-        android:name="com.specifikarma.optimumklus.UI.card.Cards"
-        android:label="cards"
-        tools:layout="@layout/front" >
+        android:id="@+id/main"
+        android:name="com.gmail.specifikarma.optimumklus.UI.gallery.Gallery"
+        android:label="main_screen"
+        tools:layout="@layout/frame_main" >
 
         <action
-            android:id="@+id/action_cards_to_backCard"
-            app:destination="@id/backCard"
+            android:id="@+id/action_main_to_gallery"
+            app:destination="@id/gallery"
             app:enterAnim="@animator/card_flip_right_in"
             app:exitAnim="@animator/card_flip_right_out"
             app:popEnterAnim="@animator/card_flip_left_in"
             app:popExitAnim="@animator/card_flip_left_out"/>
+        <action
+            android:id="@+id/action_main_to_camera"
+            app:destination="@id/camera_preview" />
     </fragment>
     <fragment
-        android:id="@+id/backCard"
-        android:name="com.specifikarma.optimumklus.UI.gallery.GridGallery"
-        android:label="fragment_back_card"
-        tools:layout="@layout/back" >
+        android:id="@+id/gallery"
+        android:name="com.gmail.specifikarma.optimumklus.UI.gallery.GridGallery"
+        android:label="gallery_screen"
+        tools:layout="@layout/gallery_main" >
+    </fragment>
+    <fragment
+        android:id="@+id/camera_preview"
+        android:name="com.gmail.specifikarma.optimumklus.UI.camera.CameraSetup"
+        android:label="camera_screen"
+        tools:layout="@layout/camera" >
         <action
-            android:id="@+id/action_cards_to_backCard"
-            app:enterAnim="@animator/card_flip_right_in"
-            app:exitAnim="@animator/card_flip_right_out"
-            app:popEnterAnim="@animator/card_flip_left_in"
-            app:popExitAnim="@animator/card_flip_left_out"/>
+            android:id="@+id/action_camera_preview_to_main"
+            app:destination="@id/main"
+            app:popUpTo="@id/camera_preview"
+            app:popUpToInclusive="true"
+         />
     </fragment>
 </navigation>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/estimation_form"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:backgroundTint="#e7e7e7"
+        android:visibility="visible"
+        app:layout_constraintTop_toBottomOf="parent"
+        app:layout_constraintDimensionRatio="0.9:1"
+        android:background="@drawable/estimation_form"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

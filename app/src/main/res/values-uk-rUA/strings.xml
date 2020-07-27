@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">OptimumKlus</string>
+    <string name="app_name">Optimum Klus</string>
     <string name="design">ДИЗАЙН</string>
     <string name="repair">РЕМОНТ</string>
     <string name="install">МОНТАЖ</string>
@@ -16,4 +16,15 @@
     <string name="garden">САД</string>
     <string name="add_contact">КОНТАКТИ</string>
     <string name="shareLink">ПОДІЛИТИСЯ ДОДАТКОМ:</string>
+    <string name="no_connection">НЕМАЄ ЗВ\'ЯЗКУ</string>
+    <string name="retry">ПОВТОРИТИ</string>
+    <string name="estimation">ОЦІНИТИ РОБОТУ</string>
+    <string name="other">IНШЕ...</string>
+    <string name="name">Ім\'я</string>
+    <string name="phone">Телефон</string>
+    <string name="free_estimation_form">БЕЗКОШТОВНА ФОРМА ОЦІНКИ</string>
+    <string name="make_photos_and_highlight_issues">Зробіть фотографії та обведіть проблеми</string>
+    <string name="select_services">Виберіть послуги</string>
+    <string name="please_type">Введіть вручну</string>
+    <string name="finish_text">СПАСИБІ! МИ СКОРО ВАМ ЗАТЕЛЕФОНУЄМО</string>
 </resources>

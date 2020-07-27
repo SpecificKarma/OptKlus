@@ -3,12 +3,14 @@
 
     <ripple android:color="#B2FFFFFF">
         <item>
-            <bitmap
-                android:alpha="0.5"
-                android:src="@drawable/circle"/>
+            <inset android:inset="2dp">
+                <shape
+                    android:shape="oval"
+                    android:tint="#80524563" />
+            </inset>
         </item>
         <item >
-            <bitmap android:src="@drawable/icon_share"  />
+            <bitmap android:src="@drawable/icon_gallery_share"  />
         </item>
     </ripple>
 </inset>

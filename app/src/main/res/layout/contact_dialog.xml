@@ -15,7 +15,7 @@
         <pl.droidsonroids.gif.GifImageView
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:background="@drawable/scroll_card"
+            android:background="@drawable/dialog_scroll"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -29,26 +29,12 @@
             android:paddingBottom="1dp"
             android:text="@string/add_phone_number_to_contacts"
             android:textAlignment="center"
-            android:textSize="16sp"
+            android:textSize="15sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
 
-
-        <!--    <Button-->
-        <!--        android:id="@+id/welcomeAdvice_button"-->
-        <!--        android:layout_width="0dp"-->
-        <!--        android:layout_height="wrap_content"-->
-        <!--        android:background="@color/foreground"-->
-        <!--        style="@style/Widget.AppCompat.Button.Borderless"-->
-        <!--        android:fontFamily="@font/arial_rounded_light"-->
-        <!--        android:text="OK"-->
-        <!--        android:textSize="18sp"-->
-        <!--        android:textColor="@color/black"-->
-        <!--        app:layout_constraintBottom_toBottomOf="@+id/review_padding04"-->
-        <!--        app:layout_constraintEnd_toStartOf="@id/review_padding04"-->
-        <!--        app:layout_constraintStart_toEndOf="@+id/review_padding02" />-->
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 

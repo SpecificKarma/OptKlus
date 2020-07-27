@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<inset xmlns:android="http://schemas.android.com/apk/res/android">
+    <ripple android:color="#85FFFFFF">
+
+        <item>
+            <inset android:inset="0dp">
+                <bitmap android:src="@drawable/icon_camera_undo" />
+            </inset>
+        </item>
+    </ripple>
+</inset>

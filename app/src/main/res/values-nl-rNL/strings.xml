@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">OptimumKlus</string>
+    <string name="app_name">Optimum Klus</string>
     <string name="design">ONTWERP</string>
     <string name="repair">HERSTEL</string>
     <string name="place">PLAATSEN</string>
     <string name="install">MONTAGE</string>
     <string name="success">SUCCES</string>
-    <string name="next">DE VOLGENDE</string>
+    <string name="next">VOLGENDE</string>
     <string name="cancel">ANNULEER</string>
     <string name="add_phone_number_to_contacts">TELEFOONNUMMER TOEVOEGEN ALS CONTACT?</string>
     <string name="paint">PAINT</string>
@@ -16,4 +16,15 @@
     <string name="spacing">0</string>
     <string name="garden">TUINWERK</string>
     <string name="add_contact">CONTACTEN</string>
+    <string name="no_connection">GEEN VERBINDING</string>
+    <string name="retry">HERHAAL</string>
+    <string name="estimation">GRATIS SCHATTING</string>
+    <string name="other">ANDERE...</string>
+    <string name="name">Naam</string>
+    <string name="phone">Telefoon</string>
+    <string name="free_estimation_form">GRATIS SCHATTINGSFORMULIER</string>
+    <string name="make_photos_and_highlight_issues">Maak foto\'s en omcirkel de problemen</string>
+    <string name="select_services">Selecteer services</string>
+    <string name="please_type">Typ handmatig</string>
+    <string name="finish_text">BEDANKT! WIJ BELLEN U BINNENKORT</string>
 </resources>

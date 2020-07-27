@@ -1,6 +1,5 @@
 <resources>
-    <string name="app_name">OptimumKlus</string>
-    <!-- TODO: Remove or change this placeholder text -->
+    <string name="app_name">Optimum Klus</string>
     <string name="design">DESIGN</string>
     <string name="repair">REPAIR</string>
     <string name="place">PLACE</string>
@@ -16,6 +15,16 @@
     <string name="spacing">0</string>
     <string name="garden">GARDEN</string>
     <string name="add_contact">CONTACTS</string>
-    <!-- TODO: Remove or change this placeholder text -->
-
+    <string name="no_connection">NO CONNECTION</string>
+    <string name="retry">RETRY</string>
+    <string name="estimation">FREE ESTIMATION</string>
+    <string name="services" translatable="false">0488 - 104 886</string>
+    <string name="other">OTHER</string>
+    <string name="name">Name</string>
+    <string name="phone">Phone</string>
+    <string name="free_estimation_form">FREE ESTIMATION FORM</string>
+    <string name="make_photos_and_highlight_issues">Make photos and circle the issues</string>
+    <string name="select_services">Select services</string>
+    <string name="please_type">Type manually</string>
+    <string name="finish_text">THANK YOU! WE CALL YOU SHORTLY</string>
 </resources>
