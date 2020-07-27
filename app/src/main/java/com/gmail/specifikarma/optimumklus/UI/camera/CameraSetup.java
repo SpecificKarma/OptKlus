@@ -9,6 +9,7 @@ import android.annotation.SuppressLint;
 import android.content.DialogInterface;
 import android.content.pm.ActivityInfo;
 import android.content.pm.PackageManager;
+import android.content.res.Configuration;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Matrix;
@@ -22,7 +23,6 @@ import android.transition.Fade;
 import android.transition.TransitionManager;
 import android.transition.TransitionSet;
 import android.util.Log;
-import android.util.Size;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.Surface;
@@ -92,6 +92,7 @@ public class CameraSetup extends Fragment implements View.OnClickListener {
     private ProcessCameraProvider cameraProvider;
     private TextView count;
     private Button sent;
+    private ListenableFuture<ProcessCameraProvider> cameraProviderFuture;
 
     private boolean allPermissionsGranted() {
         for (String permission : REQUIRED_PERMISSIONS) {
@@ -115,7 +116,6 @@ public class CameraSetup extends Fragment implements View.OnClickListener {
     }
 
     private void startCamera() {
-        final ListenableFuture<ProcessCameraProvider> cameraProviderFuture = ProcessCameraProvider.getInstance(getContext());
         cameraProviderFuture.addListener(new Runnable() {
             @Override
             public void run() {
@@ -128,7 +128,6 @@ public class CameraSetup extends Fragment implements View.OnClickListener {
 
                     imageCapture = new ImageCapture.Builder()
                             .setTargetAspectRatio(AspectRatio.RATIO_16_9)
-
                             .setTargetRotation(toSurfaceRotationDegrees(getActivity().getWindowManager().getDefaultDisplay().getRotation()))
                             .setCaptureMode(ImageCapture.CAPTURE_MODE_MINIMIZE_LATENCY)
                             .setFlashMode(ImageCapture.FLASH_MODE_AUTO)
@@ -153,6 +152,12 @@ public class CameraSetup extends Fragment implements View.OnClickListener {
                             preview,
                             imageCapture);
 
+                    if (getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE) {
+                        getActivity().setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
+                    } else {
+                        getActivity().setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+                    }
+
                     // Connect the preview use case to the previewView
                     preview.setSurfaceProvider(previewView.createSurfaceProvider());
 
@@ -172,15 +177,21 @@ public class CameraSetup extends Fragment implements View.OnClickListener {
     }
 
     @Override
-    public void onDestroyView() {
-        super.onDestroyView();
-        cameraProvider.unbindAll();
+    public void onDestroy() {
+        super.onDestroy();
+        try {
+            cameraProvider.unbindAll();
+            getActivity().setRequestedOrientation(
+                    ActivityInfo.SCREEN_ORIENTATION_UNSPECIFIED);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-
+        cameraProviderFuture = ProcessCameraProvider.getInstance(getContext());
         form = Preferences.loadForm(getContext());
         count = view.findViewById(R.id.camera_image_count);
         previewView = view.findViewById(R.id.camera_preview);
@@ -198,8 +209,6 @@ public class CameraSetup extends Fragment implements View.OnClickListener {
         for (int id : new int[]{R.id.capture, R.id.save, R.id.undo, R.id.sent_message}) {
             ((Button) view.findViewById(id)).setOnClickListener(this);
         }
-
-        getActivity().setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
     }
 
     @Override
@@ -269,14 +278,10 @@ public class CameraSetup extends Fragment implements View.OnClickListener {
         }
     }
 
-
     public static String getRandomNumberString() {
-        // It will generate 6 digit random Number.
-        // from 0 to 999999
         Random rnd = new Random();
         int number = rnd.nextInt(9999);
 
-        // this will convert any number sequence into 6 character.
         return String.format("%04d", number);
     }
 
@@ -299,7 +304,11 @@ public class CameraSetup extends Fragment implements View.OnClickListener {
                         view.findViewById(R.id.blink).setBackgroundResource(R.drawable.camera_blink);
 
                         Matrix matrix = new Matrix();
-                        matrix.postRotate(90);
+                        if (getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE) {
+                            matrix.postRotate(0);
+                        } else {
+                            matrix.postRotate(90);
+                        }
 
                         Bitmap bm = BitmapFactory.decodeFile(file.getPath());
                         Bitmap rotatedBitmap = Bitmap.createBitmap(bm, 0, 0, bm.getWidth(), bm.getHeight(), matrix, true);
@@ -358,7 +367,6 @@ public class CameraSetup extends Fragment implements View.OnClickListener {
                 }
             }
         });
-
     }
 
     private void createFolderIfNotExist() {
@@ -397,7 +405,6 @@ public class CameraSetup extends Fragment implements View.OnClickListener {
         view.findViewById(id).setVisibility(!isVisible ? View.INVISIBLE : View.VISIBLE);
     }
 
-
     private int toSurfaceRotationDegrees(int rotation) {
         switch (rotation) {
             case 0:
@@ -416,7 +423,6 @@ public class CameraSetup extends Fragment implements View.OnClickListener {
 
         final ImageView expandedImageView = thumbView.getRootView().findViewById(
                 R.id.paint_me);
-
 
         final Rect startBounds = new Rect();
         final Rect finalBounds = new Rect();
@@ -450,47 +456,11 @@ public class CameraSetup extends Fragment implements View.OnClickListener {
         thumbView.setAlpha(1f);
         expandedImageView.setVisibility(View.VISIBLE);
 
-        // Set the pivot point for SCALE_X and SCALE_Y transformations
-        // to the top-left corner of the zoomed-in view (the default
-        // is the center of the view).
         expandedImageView.setPivotX(0f);
         expandedImageView.setPivotY(0f);
 
-        // Construct and run the parallel animation of the four translation and
-        // scale properties (X, Y, SCALE_X, and SCALE_Y).
-//        AnimatorSet set = new AnimatorSet();
-//        set
-//                .play(ObjectAnimator.ofFloat(expandedImageView, View.X,
-//                        startBounds.left, finalBounds.left))
-//                .with(ObjectAnimator.ofFloat(expandedImageView, View.Y,
-//                        startBounds.top, finalBounds.top))
-//                .with(ObjectAnimator.ofFloat(expandedImageView, View.SCALE_X,
-//                        startScale, 1f))
-//                .with(ObjectAnimator.ofFloat(expandedImageView,
-//                        View.SCALE_Y, startScale, 1f));
-//        set.setDuration(300);
-//        set.setInterpolator(new DecelerateInterpolator());
-//        set.addListener(new AnimatorListenerAdapter() {
-//            @Override
-//            public void onAnimationEnd(Animator animation) {
-//                currentAnimator = null;
-//            }
-//
-//            @Override
-//            public void onAnimationCancel(Animator animation) {
-//                currentAnimator = null;
-//            }
-//        });
-//        set.start();
-//        currentAnimator = set;
-
-        // Upon clicking the zoomed-in image, it should zoom back down
-        // to the original bounds and show the thumbnail instead of
-        // the expanded image.
         final float startScaleFinal = startScale;
 
-        // Animate the four positioning/sizing properties in parallel,
-        // back to their original values.
         AnimatorSet set = new AnimatorSet();
         set.play(ObjectAnimator
                 .ofFloat(expandedImageView, View.X, startBounds.left))
@@ -525,7 +495,6 @@ public class CameraSetup extends Fragment implements View.OnClickListener {
                 set1.setInterpolator(new DecelerateInterpolator());
                 set1.start();
             }
-
             @Override
             public void onAnimationCancel(Animator animation) {
                 thumbView.setAlpha(1f);
@@ -533,10 +502,7 @@ public class CameraSetup extends Fragment implements View.OnClickListener {
             }
         });
         set.start();
-
-
     }
-
 }
 
 

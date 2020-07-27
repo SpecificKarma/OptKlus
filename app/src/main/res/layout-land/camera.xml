@@ -48,11 +48,12 @@
             android:layout_width="0dp"
             android:layout_height="?android:attr/actionBarSize"
             android:visibility="invisible"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintBottom_toTopOf="@id/camera_bar"
-            app:layout_constraintDimensionRatio="1:1">
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintEnd_toStartOf="@id/camera_bar"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/undo"
@@ -68,22 +69,22 @@
             android:layout_height="?android:attr/actionBarSize"
             android:visibility="invisible"
             android:background="@drawable/icon_camera_draw"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintBottom_toTopOf="@id/camera_bar"
-            app:layout_constraintDimensionRatio="1:1" />
-
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintEnd_toStartOf="@id/camera_bar"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/camera_bar"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:background="#66000000"
-            app:layout_constraintDimensionRatio="4:1"
+            app:layout_constraintDimensionRatio="1:4"
+            app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent">
+            app:layout_constraintEnd_toEndOf="parent">
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/recent_image_fade"
@@ -91,19 +92,19 @@
                 android:layout_width="0dp"
                 android:layout_height="?android:attr/actionBarSize"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintDimensionRatio="1:1"
-                app:layout_constraintEnd_toStartOf="@id/capture_fade"
+                app:layout_constraintTop_toBottomOf="@id/capture_fade"
                 app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintVertical_bias="0.5"
                 android:background="@drawable/camera_recent_outline">
 
                 <ImageView
+                     android:layout_margin="1dp"
                     android:id="@+id/recent_image"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_margin="1dp" />
+                    android:layout_height="match_parent" />
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <TextView
@@ -114,8 +115,9 @@
                 android:textSize="18sp"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toEndOf="@id/recent_image_fade"
-                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/capture_fade"
                 app:layout_constraintVertical_bias="0.2" />
 
             <androidx.constraintlayout.widget.ConstraintLayout
@@ -123,12 +125,12 @@
                 android:visibility="invisible"
                 android:layout_width="0dp"
                 android:layout_height="?android:attr/actionBarSize"
-                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintDimensionRatio="1:1"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.5"
-                app:layout_constraintStart_toEndOf="@id/capture_fade"
+                app:layout_constraintBottom_toTopOf="@id/capture_fade"
                 app:layout_constraintVertical_bias="0.5">
 
                 <androidx.appcompat.widget.AppCompatButton

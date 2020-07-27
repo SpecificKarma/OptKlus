@@ -116,7 +116,8 @@ public class Estimation extends Fragment implements View.OnClickListener {
     }
 
     private boolean checkName() {
-        if (name.getText().toString().equals("")) {
+        if (name.getText().length() < 3) {
+            form.addName("");
             nameError.setBackgroundColor(Color.RED);
             return false;
         }
@@ -126,7 +127,7 @@ public class Estimation extends Fragment implements View.OnClickListener {
     }
 
     private boolean checkPhone() {
-        if (phone.getText().toString().equals("") && phone.getText().length() < 10) {
+        if (phone.getText().length() < 10) {
             phoneError.setBackgroundColor(Color.RED);
             return false;
         }

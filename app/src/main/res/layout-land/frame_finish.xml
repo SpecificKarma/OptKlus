@@ -160,7 +160,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.9">
 
-        <Button
+        <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/gallery"
             style="@style/Widget.AppCompat.Button.Borderless"
             android:layout_width="match_parent"
@@ -192,32 +192,6 @@
             app:layout_constraintTop_toTopOf="parent" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:visibility="invisible"
-        android:id="@+id/gallery_desc_fade"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:paddingStart="1dp"
-        android:paddingTop="5dp"
-        app:layout_constraintEnd_toEndOf="@id/gallery_fade"
-        app:layout_constraintStart_toStartOf="@id/gallery_fade"
-        app:layout_constraintTop_toBottomOf="@id/gallery_fade">
-
-        <TextView
-            android:id="@+id/gallery_desc"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="sans-serif-medium"
-            android:letterSpacing="0.9"
-            android:text="@string/gallery"
-            android:textAlignment="center"
-            android:textColor="@android:color/white"
-            android:textSize="@dimen/textSize"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
 
 <!--                CONTACTS                    -->
 
@@ -261,7 +235,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent">
 
-        <Button
+        <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/contacts"
             style="@style/Widget.AppCompat.Button.Borderless"
             android:layout_width="match_parent"
@@ -281,11 +255,11 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintDimensionRatio="1.45:1"
+        app:layout_constraintDimensionRatio="5:1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.525">
+        app:layout_constraintVertical_bias="0.55">
 
         <ImageView
             android:id="@+id/contacts_hint_y"
@@ -299,32 +273,7 @@
             app:layout_constraintTop_toTopOf="parent" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/contacts_desc_fade"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:paddingTop="5dp"
-        android:paddingStart="1dp"
-        android:visibility="invisible"
-        app:layout_constraintEnd_toEndOf="@id/contacts_fade"
-        app:layout_constraintStart_toStartOf="@id/contacts_fade"
-        app:layout_constraintTop_toBottomOf="@id/contacts_fade">
 
-        <TextView
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            android:id="@+id/contacts_desc"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="sans-serif"
-            android:letterSpacing="0.1"
-            android:text="@string/add_contact"
-            android:textAlignment="center"
-            android:textColor="@android:color/white"
-            android:textSize="@dimen/textSize" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
 
 <!--                ESTIMATION                    -->
 
@@ -368,7 +317,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.5">
 
-        <Button
+        <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/estimation"
             style="@style/Widget.AppCompat.Button.Borderless"
             android:layout_width="match_parent"
@@ -382,11 +331,11 @@
         android:layout_height="0dp"
         android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintDimensionRatio="1.45:1"
+        app:layout_constraintDimensionRatio="5:1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.525">
+        app:layout_constraintVertical_bias="0.55">
 
         <ImageView
             android:id="@+id/estimation_hint_y"
@@ -395,33 +344,6 @@
             android:background="@drawable/contacts_hint"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintDimensionRatio="1.02:1"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/estimation_desc_fade"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:paddingStart="1dp"
-        android:paddingTop="5dp"
-        android:visibility="invisible"
-        app:layout_constraintEnd_toEndOf="@id/estimation_fade"
-        app:layout_constraintStart_toStartOf="@id/estimation_fade"
-        app:layout_constraintTop_toBottomOf="@id/estimation_fade">
-
-        <TextView
-            android:id="@+id/estimation_desc"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="sans-serif"
-            android:letterSpacing="0.1"
-            android:text="@string/estimation"
-            android:textAlignment="center"
-            android:textColor="@android:color/white"
-            android:textSize="@dimen/textSize"
-            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />

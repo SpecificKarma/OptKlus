@@ -85,7 +85,7 @@ public class GridGallery extends Gallery implements View.OnClickListener {
         final Point globalOffset = new Point();
 
         thumbView.getGlobalVisibleRect(startBounds);
-        thumbView.getRootView().findViewById(R.id.gallery_main)
+        thumbView.getRootView().findViewById(R.id.gridView)
                 .getGlobalVisibleRect(finalBounds, globalOffset);
         startBounds.offset(-globalOffset.x, -globalOffset.y);
         finalBounds.offset(-globalOffset.x, -globalOffset.y);

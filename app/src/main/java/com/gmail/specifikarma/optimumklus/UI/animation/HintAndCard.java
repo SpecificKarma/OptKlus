@@ -194,8 +194,13 @@ public class HintAndCard extends AddContact {
                 .addTransition(new Fade())
                 .setDuration(duration)
                 .setInterpolator(new FastOutLinearInInterpolator());
-        TransitionManager.beginDelayedTransition((ViewGroup) view.findViewById(id), set);
 
-        view.findViewById(id).setVisibility(!isVisible ? View.INVISIBLE : View.VISIBLE);
+        try {
+            TransitionManager.beginDelayedTransition((ViewGroup) view.findViewById(id), set);
+            view.findViewById(id).setVisibility(!isVisible ? View.INVISIBLE : View.VISIBLE);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
     }
 }
