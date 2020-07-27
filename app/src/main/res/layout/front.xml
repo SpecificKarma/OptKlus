@@ -1,0 +1,1555 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/base"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/black"
+    tools:context=".UI.card.Cards">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/box_01"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/front"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/welcome_anim"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/welcome"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/scale_anim"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/top_line_right"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintDimensionRatio="3.5:1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.2505">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/divider_00"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintDimensionRatio="0.06:1"
+                app:layout_constraintEnd_toStartOf="@id/top_rail_01"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/top_rail_01"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintDimensionRatio="0.73:1"
+                app:layout_constraintEnd_toStartOf="@id/divider_01"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/divider_01"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintDimensionRatio="0.06:1"
+                app:layout_constraintEnd_toStartOf="@id/top_rail_02"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/top_rail_02"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintDimensionRatio="0.73:1"
+                app:layout_constraintEnd_toStartOf="@id/divider_02"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/divider_02"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintDimensionRatio="0.06:1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/top_rail_03"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintDimensionRatio="0.73:1"
+                app:layout_constraintStart_toEndOf="@+id/divider_02"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/divider_03"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintDimensionRatio="0.06:1"
+                app:layout_constraintStart_toEndOf="@+id/top_rail_03"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/first0"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="@drawable/no_color_shadow"
+                android:text="R1"
+                android:textSize="60dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintDimensionRatio="0.85:1"
+                app:layout_constraintEnd_toEndOf="@id/divider_01"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/padding_R1_01"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    app:layout_constraintDimensionRatio="1:1"
+                    app:layout_constraintEnd_toEndOf="@+id/padding_R1_03"
+                    app:layout_constraintStart_toStartOf="@+id/padding_R1_03"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/padding_R1_02"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintDimensionRatio="1:1"
+                    app:layout_constraintEnd_toEndOf="@id/padding_R1_01"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/padding_R1_03"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    app:layout_constraintBottom_toTopOf="@id/padding_R1_02"
+                    app:layout_constraintDimensionRatio="1:14.79"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/padding_R1_01" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/padding_R1_04"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    app:layout_constraintBottom_toTopOf="@id/padding_R1_02"
+                    app:layout_constraintDimensionRatio="1:14.79"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/padding_R1_01" />
+
+                <ImageView
+                    android:id="@+id/TR1"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:alpha="0.9"
+                    app:layout_constraintBottom_toTopOf="@id/padding_R1_02"
+                    app:layout_constraintEnd_toStartOf="@id/padding_R1_04"
+                    app:layout_constraintStart_toEndOf="@id/padding_R1_01"
+                    app:layout_constraintTop_toBottomOf="@id/padding_R1_01" />
+
+                <TextView
+                    android:id="@+id/TR1_t"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-black"
+                    android:letterSpacing="@string/spacing"
+                    android:text="@string/design"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/textSize"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/padding_R1_01"
+                    app:layout_constraintVertical_bias="0.95" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/two0"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="@drawable/no_color_shadow"
+                android:text="R2"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintDimensionRatio="0.85:1"
+                app:layout_constraintEnd_toEndOf="@id/divider_02"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/padding_R2_01"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    app:layout_constraintDimensionRatio="1:1"
+                    app:layout_constraintEnd_toEndOf="@+id/padding_R2_03"
+                    app:layout_constraintStart_toStartOf="@+id/padding_R2_03"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/padding_R2_02"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintDimensionRatio="1:1"
+                    app:layout_constraintEnd_toEndOf="@id/padding_R2_01"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/padding_R2_03"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    app:layout_constraintBottom_toTopOf="@id/padding_R2_02"
+                    app:layout_constraintDimensionRatio="1:14.79"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/padding_R2_01" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/padding_R2_04"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    app:layout_constraintBottom_toTopOf="@id/padding_R2_02"
+                    app:layout_constraintDimensionRatio="1:14.79"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/padding_R2_01" />
+
+                <ImageView
+                    android:id="@+id/TR2"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:alpha="0.9"
+                    app:layout_constraintBottom_toTopOf="@id/padding_R2_02"
+                    app:layout_constraintEnd_toStartOf="@id/padding_R2_04"
+                    app:layout_constraintStart_toEndOf="@id/padding_R2_01"
+                    app:layout_constraintTop_toBottomOf="@id/padding_R2_01" />
+
+                <TextView
+                    android:id="@+id/TR2_t"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-black"
+                    android:letterSpacing="@string/spacing"
+                    android:text="@string/repair"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/textSize"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/padding_R2_01"
+                    app:layout_constraintVertical_bias="0.95" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/three000000"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="@drawable/no_color_shadow"
+                android:text="R3"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintDimensionRatio="0.85:1"
+                app:layout_constraintStart_toStartOf="@+id/divider_02"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/padding_R3_01"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    app:layout_constraintDimensionRatio="1:1"
+                    app:layout_constraintEnd_toEndOf="@+id/padding_R3_03"
+                    app:layout_constraintStart_toStartOf="@+id/padding_R3_03"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/padding_R3_02"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintDimensionRatio="1:1"
+                    app:layout_constraintEnd_toEndOf="@id/padding_R3_01"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/padding_R3_03"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    app:layout_constraintBottom_toTopOf="@id/padding_R3_02"
+                    app:layout_constraintDimensionRatio="1:14.79"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/padding_R3_01" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/padding_R3_04"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    app:layout_constraintBottom_toTopOf="@id/padding_R3_02"
+                    app:layout_constraintDimensionRatio="1:14.79"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/padding_R3_01" />
+
+                <ImageView
+                    android:id="@+id/TR3"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:alpha="0.9"
+                    app:layout_constraintBottom_toTopOf="@id/padding_R3_02"
+                    app:layout_constraintDimensionRatio="1:1.22"
+                    app:layout_constraintEnd_toStartOf="@id/padding_R3_04"
+                    app:layout_constraintStart_toEndOf="@id/padding_R3_01"
+                    app:layout_constraintTop_toBottomOf="@id/padding_R3_01" />
+
+                <TextView
+                    android:id="@+id/TR3_t"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-black"
+                    android:letterSpacing="@string/spacing"
+                    android:text="@string/place"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/textSize"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/padding_R3_01"
+                    app:layout_constraintVertical_bias="0.95" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/top_line_left"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintDimensionRatio="3.5:1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.2505">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/divider_001"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintDimensionRatio="0.06:1"
+                app:layout_constraintEnd_toStartOf="@id/top_rail_002"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/top_rail_002"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintDimensionRatio="0.73:1"
+                app:layout_constraintEnd_toStartOf="@id/divider_002"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/divider_002"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintDimensionRatio="0.06:1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/top_rail_003"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintDimensionRatio="0.73:1"
+                app:layout_constraintStart_toEndOf="@+id/divider_002"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/divider_003"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintDimensionRatio="0.06:1"
+                app:layout_constraintStart_toEndOf="@+id/top_rail_003"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/top_rail_004"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintDimensionRatio="0.73:1"
+                app:layout_constraintEnd_toStartOf="@+id/divider_001"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/divider_004"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintDimensionRatio="0.06:1"
+                app:layout_constraintStart_toEndOf="@+id/top_rail_004"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/divider_005"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintDimensionRatio="0.06:1"
+                app:layout_constraintStart_toStartOf="@+id/one00"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/three00000"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="@drawable/no_color_shadow"
+                android:text="L3"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintDimensionRatio="0.85:1"
+                app:layout_constraintEnd_toEndOf="@+id/divider_005"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/padding_L3_010"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    app:layout_constraintDimensionRatio="1:1"
+                    app:layout_constraintEnd_toEndOf="@+id/padding_L3_030"
+                    app:layout_constraintStart_toStartOf="@+id/padding_L3_030"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/padding_L3_020"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintDimensionRatio="1:1"
+                    app:layout_constraintEnd_toEndOf="@id/padding_L3_010"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/padding_L3_030"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    app:layout_constraintBottom_toTopOf="@id/padding_L3_020"
+                    app:layout_constraintDimensionRatio="1:14.79"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/padding_L3_010" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/padding_L3_040"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    app:layout_constraintBottom_toTopOf="@id/padding_L3_020"
+                    app:layout_constraintDimensionRatio="1:14.79"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/padding_L3_010" />
+
+                <ImageView
+                    android:id="@+id/TL3_COPY"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:alpha="0.9"
+                    app:layout_constraintBottom_toTopOf="@id/padding_L3_020"
+                    app:layout_constraintDimensionRatio="1:1.22"
+                    app:layout_constraintEnd_toStartOf="@id/padding_L3_040"
+                    app:layout_constraintStart_toEndOf="@id/padding_L3_010"
+                    app:layout_constraintTop_toBottomOf="@id/padding_L3_010" />
+
+                <TextView
+                    android:id="@+id/TL3_COPY_t"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-black"
+                    android:letterSpacing="@string/spacing"
+                    android:text="@string/place"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/textSize"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/padding_L3_010"
+                    app:layout_constraintVertical_bias="0.95" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/one00"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="@drawable/no_color_shadow"
+                android:text="L1"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintDimensionRatio="0.85:1"
+                app:layout_constraintEnd_toEndOf="@+id/divider_001"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/padding_L1_01"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    app:layout_constraintDimensionRatio="1:1"
+                    app:layout_constraintEnd_toEndOf="@+id/padding_L1_03"
+                    app:layout_constraintStart_toStartOf="@+id/padding_L1_03"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/padding_L1_02"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintDimensionRatio="1:1"
+                    app:layout_constraintEnd_toEndOf="@id/padding_L1_01"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/padding_L1_03"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    app:layout_constraintBottom_toTopOf="@id/padding_L1_02"
+                    app:layout_constraintDimensionRatio="1:14.79"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/padding_L1_01" />
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/padding_L1_04"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    app:layout_constraintBottom_toTopOf="@id/padding_L1_02"
+                    app:layout_constraintDimensionRatio="1:14.79"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/padding_L1_01" />
+
+
+                <ImageView
+                    android:id="@+id/TL1"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:alpha="0.9"
+                    app:layout_constraintBottom_toTopOf="@id/padding_L1_02"
+                    app:layout_constraintEnd_toStartOf="@id/padding_L1_04"
+                    app:layout_constraintStart_toEndOf="@id/padding_L1_01"
+                    app:layout_constraintTop_toBottomOf="@id/padding_L1_01" />
+
+                <TextView
+                    android:id="@+id/TL1_t"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-black"
+                    android:letterSpacing="@string/spacing"
+                    android:text="@string/design"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/textSize"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/padding_L1_01"
+                    app:layout_constraintVertical_bias="0.95" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/two0000"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="@drawable/no_color_shadow"
+                android:text="L2"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintDimensionRatio="0.85:1"
+                app:layout_constraintEnd_toEndOf="@id/divider_002"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/padding_L2_01"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    app:layout_constraintDimensionRatio="1:1"
+                    app:layout_constraintEnd_toEndOf="@+id/padding_L2_03"
+                    app:layout_constraintStart_toStartOf="@+id/padding_L2_03"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/padding_L2_02"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintDimensionRatio="1:1"
+                    app:layout_constraintEnd_toEndOf="@id/padding_L2_01"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/padding_L2_03"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    app:layout_constraintBottom_toTopOf="@id/padding_L2_02"
+                    app:layout_constraintDimensionRatio="1:14.79"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/padding_L2_01" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/padding_L2_04"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    app:layout_constraintBottom_toTopOf="@id/padding_L2_02"
+                    app:layout_constraintDimensionRatio="1:14.79"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/padding_L2_01" />
+
+                <ImageView
+                    android:id="@+id/TL2"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:alpha="0.9"
+                    app:layout_constraintBottom_toTopOf="@id/padding_L2_02"
+                    app:layout_constraintEnd_toStartOf="@id/padding_L2_04"
+                    app:layout_constraintStart_toEndOf="@id/padding_L2_01"
+                    app:layout_constraintTop_toBottomOf="@id/padding_L2_01" />
+
+                <TextView
+                    android:id="@+id/TL2_t"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-black"
+                    android:letterSpacing="@string/spacing"
+                    android:text="@string/repair"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/textSize"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/padding_L2_01"
+                    app:layout_constraintVertical_bias="0.95" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/three0000"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="@drawable/no_color_shadow"
+                android:text="L3"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintDimensionRatio="0.85:1"
+                app:layout_constraintStart_toStartOf="@+id/divider_002"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/padding_L3_01"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    app:layout_constraintDimensionRatio="1:1"
+                    app:layout_constraintEnd_toEndOf="@+id/padding_L3_03"
+                    app:layout_constraintStart_toStartOf="@+id/padding_L3_03"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/padding_L3_02"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintDimensionRatio="1:1"
+                    app:layout_constraintEnd_toEndOf="@id/padding_L3_01"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/padding_L3_03"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    app:layout_constraintBottom_toTopOf="@id/padding_L3_02"
+                    app:layout_constraintDimensionRatio="1:14.79"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/padding_L3_01" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/padding_L3_04"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    app:layout_constraintBottom_toTopOf="@id/padding_L3_02"
+                    app:layout_constraintDimensionRatio="1:14.79"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/padding_L3_01" />
+
+                <ImageView
+                    android:id="@+id/TL3"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:alpha="0.9"
+                    app:layout_constraintBottom_toTopOf="@id/padding_L3_02"
+                    app:layout_constraintDimensionRatio="1:1.22"
+                    app:layout_constraintEnd_toStartOf="@id/padding_L3_04"
+                    app:layout_constraintStart_toEndOf="@id/padding_L3_01"
+                    app:layout_constraintTop_toBottomOf="@id/padding_L3_01" />
+
+                <TextView
+                    android:id="@+id/TL3_t"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-black"
+                    android:letterSpacing="@string/spacing"
+                    android:text="@string/place"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/textSize"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/padding_L3_01"
+                    app:layout_constraintVertical_bias="0.95" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <!--__________________________________________________________________-->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/bottom_line_right"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintDimensionRatio="3.5:1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.7497">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/divider_000"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintDimensionRatio="0.06:1"
+                app:layout_constraintEnd_toStartOf="@id/top_rail_010"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/top_rail_010"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintDimensionRatio="0.73:1"
+                app:layout_constraintEnd_toStartOf="@id/divider_010"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/divider_010"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintDimensionRatio="0.06:1"
+                app:layout_constraintEnd_toStartOf="@id/top_rail_020"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/top_rail_020"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintDimensionRatio="0.73:1"
+                app:layout_constraintEnd_toStartOf="@id/divider_020"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/divider_020"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintDimensionRatio="0.06:1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/top_rail_030"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintDimensionRatio="0.73:1"
+                app:layout_constraintStart_toEndOf="@+id/divider_020"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/divider_030"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintDimensionRatio="0.06:1"
+                app:layout_constraintStart_toEndOf="@+id/top_rail_030"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/top_rail_040"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintDimensionRatio="0.73:1"
+                app:layout_constraintStart_toEndOf="@+id/divider_030"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/divider_040"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintDimensionRatio="0.06:1"
+                app:layout_constraintStart_toEndOf="@+id/top_rail_040"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/two00"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="@drawable/no_color_shadow"
+                android:text="BL2"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintDimensionRatio="0.85:1"
+                app:layout_constraintEnd_toEndOf="@id/divider_020"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/padding_BL2_01"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    app:layout_constraintDimensionRatio="1:1"
+                    app:layout_constraintEnd_toEndOf="@+id/padding_BL2_03"
+                    app:layout_constraintStart_toStartOf="@+id/padding_BL2_03"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/padding_BL2_02"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintDimensionRatio="1:1"
+                    app:layout_constraintEnd_toEndOf="@id/padding_BL2_01"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/padding_BL2_03"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    app:layout_constraintBottom_toTopOf="@id/padding_BL2_02"
+                    app:layout_constraintDimensionRatio="1:14.79"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/padding_BL2_01" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/padding_BL2_04"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    app:layout_constraintBottom_toTopOf="@id/padding_BL2_02"
+                    app:layout_constraintDimensionRatio="1:14.79"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/padding_BL2_01" />
+
+                <ImageView
+                    android:id="@+id/BL2"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:alpha="0.9"
+                    app:layout_constraintBottom_toTopOf="@id/padding_BL2_02"
+                    app:layout_constraintEnd_toStartOf="@id/padding_BL2_04"
+                    app:layout_constraintStart_toEndOf="@id/padding_BL2_01"
+                    app:layout_constraintTop_toBottomOf="@id/padding_BL2_01" />
+
+                <TextView
+                    android:id="@+id/BL2_t"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-black"
+                    android:letterSpacing="@string/spacing"
+                    android:text="@string/garden"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/textSize"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/padding_BL2_01"
+                    app:layout_constraintVertical_bias="0.05" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/three00"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="@drawable/no_color_shadow"
+                android:text="BL3"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintDimensionRatio="0.85:1"
+                app:layout_constraintStart_toStartOf="@+id/divider_020"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/padding_BL3_01"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    app:layout_constraintDimensionRatio="1:1"
+                    app:layout_constraintEnd_toEndOf="@+id/padding_BL3_03"
+                    app:layout_constraintStart_toStartOf="@+id/padding_BL3_03"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/padding_BL3_02"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintDimensionRatio="1:1"
+                    app:layout_constraintEnd_toEndOf="@id/padding_BL3_01"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/padding_BL3_03"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    app:layout_constraintBottom_toTopOf="@id/padding_BL3_02"
+                    app:layout_constraintDimensionRatio="1:14.79"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/padding_BL3_01" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/padding_BL3_04"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    app:layout_constraintBottom_toTopOf="@id/padding_BL3_02"
+                    app:layout_constraintDimensionRatio="1:14.79"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/padding_BL3_01" />
+
+                <ImageView
+                    android:id="@+id/BL3"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:alpha="0.9"
+                    app:layout_constraintBottom_toTopOf="@id/padding_BL3_02"
+                    app:layout_constraintEnd_toStartOf="@id/padding_BL3_04"
+                    app:layout_constraintStart_toEndOf="@id/padding_BL3_01"
+                    app:layout_constraintTop_toBottomOf="@id/padding_BL3_01" />
+
+                <TextView
+                    android:id="@+id/BL3_t"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-black"
+                    android:letterSpacing="@string/spacing"
+                    android:text="@string/paint"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/textSize"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/padding_BL3_01"
+                    app:layout_constraintVertical_bias="0.05" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/four00"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="@drawable/no_color_shadow"
+                android:text="BL1"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintDimensionRatio="0.85:1"
+                app:layout_constraintStart_toStartOf="@+id/divider_030"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/padding_BL1_010"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    app:layout_constraintDimensionRatio="1:1"
+                    app:layout_constraintEnd_toEndOf="@+id/padding_BL1_030"
+                    app:layout_constraintStart_toStartOf="@+id/padding_BL1_030"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/padding_BL1_020"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintDimensionRatio="1:1"
+                    app:layout_constraintEnd_toEndOf="@id/padding_BL1_010"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/padding_BL1_030"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    app:layout_constraintBottom_toTopOf="@id/padding_BL1_020"
+                    app:layout_constraintDimensionRatio="1:14.79"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/padding_BL1_010" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/padding_BL1_040"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    app:layout_constraintBottom_toTopOf="@id/padding_BL1_020"
+                    app:layout_constraintDimensionRatio="1:14.79"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/padding_BL1_010" />
+
+                <ImageView
+                    android:id="@+id/BL1"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:alpha="0.9"
+                    app:layout_constraintBottom_toTopOf="@id/padding_BL1_020"
+                    app:layout_constraintEnd_toStartOf="@id/padding_BL1_040"
+                    app:layout_constraintStart_toEndOf="@id/padding_BL1_010"
+                    app:layout_constraintTop_toBottomOf="@id/padding_BL1_010" />
+
+                <TextView
+                    android:id="@+id/BL1_t"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-black"
+                    android:letterSpacing="@string/spacing"
+                    android:text="@string/install"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/textSize"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/padding_BL1_010"
+                    app:layout_constraintVertical_bias="0.05" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/top_rail_left0"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintDimensionRatio="3.5:1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.7497">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/divider_0010"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintDimensionRatio="0.06:1"
+                app:layout_constraintEnd_toStartOf="@id/top_rail_0020"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/top_rail_0020"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintDimensionRatio="0.73:1"
+                app:layout_constraintEnd_toStartOf="@id/divider_0020"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/divider_0020"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintDimensionRatio="0.06:1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/top_rail_0030"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintDimensionRatio="0.73:1"
+                app:layout_constraintStart_toEndOf="@+id/divider_0020"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/divider_0030"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintDimensionRatio="0.06:1"
+                app:layout_constraintStart_toEndOf="@+id/top_rail_0030"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/top_rail_0040"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintDimensionRatio="0.73:1"
+                app:layout_constraintStart_toEndOf="@+id/divider_0030"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/divider_0040"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintDimensionRatio="0.06:1"
+                app:layout_constraintStart_toEndOf="@+id/top_rail_0040"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/two000"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="@drawable/no_color_shadow"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintDimensionRatio="0.85:1"
+                app:layout_constraintEnd_toEndOf="@id/divider_0020"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/padding_BR2_01"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    app:layout_constraintDimensionRatio="1:1"
+                    app:layout_constraintEnd_toEndOf="@+id/padding_BR2_03"
+                    app:layout_constraintStart_toStartOf="@+id/padding_BR2_03"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/padding_BR2_02"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintDimensionRatio="1:1"
+                    app:layout_constraintEnd_toEndOf="@id/padding_BR2_01"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/padding_BR2_03"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    app:layout_constraintBottom_toTopOf="@id/padding_BR2_02"
+                    app:layout_constraintDimensionRatio="1:14.79"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/padding_BR2_01" />
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/padding_BR2_04"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    app:layout_constraintBottom_toTopOf="@id/padding_BR2_02"
+                    app:layout_constraintDimensionRatio="1:14.79"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/padding_BR2_01" />
+
+                <ImageView
+                    android:id="@+id/BR2"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:alpha="0.9"
+                    app:layout_constraintBottom_toTopOf="@id/padding_BR2_02"
+                    app:layout_constraintEnd_toStartOf="@id/padding_BR2_04"
+                    app:layout_constraintStart_toEndOf="@id/padding_BR2_01"
+                    app:layout_constraintTop_toBottomOf="@id/padding_BR2_01" />
+
+                <TextView
+                    android:id="@+id/BR2_t"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-black"
+                    android:letterSpacing="@string/spacing"
+                    android:text="@string/garden"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/textSize"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/padding_BR2_01"
+                    app:layout_constraintVertical_bias="0.05" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/three000"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="@drawable/no_color_shadow"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintDimensionRatio="0.85:1"
+                app:layout_constraintStart_toStartOf="@+id/divider_0020"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/padding_BR3_01"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    app:layout_constraintDimensionRatio="1:1"
+                    app:layout_constraintEnd_toEndOf="@+id/padding_BR3_03"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/padding_BR3_02"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintDimensionRatio="1:1"
+                    app:layout_constraintEnd_toEndOf="@id/padding_BR3_01"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/padding_BR3_03"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    app:layout_constraintBottom_toTopOf="@id/padding_BR3_02"
+                    app:layout_constraintDimensionRatio="1:14.79"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/padding_BR3_01" />
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/padding_BR3_04"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    app:layout_constraintBottom_toTopOf="@id/padding_BR3_02"
+                    app:layout_constraintDimensionRatio="1:14.79"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/padding_BR3_01" />
+
+                <ImageView
+                    android:id="@+id/BR3"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:alpha="0.9"
+                    app:layout_constraintBottom_toTopOf="@id/padding_BR3_02"
+                    app:layout_constraintEnd_toStartOf="@id/padding_BR3_04"
+                    app:layout_constraintStart_toEndOf="@id/padding_BR3_01"
+                    app:layout_constraintTop_toBottomOf="@id/padding_BR3_01" />
+
+                <TextView
+                    android:id="@+id/BR3_t"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-black"
+                    android:letterSpacing="@string/spacing"
+                    android:text="@string/paint"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/textSize"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/padding_BR3_01"
+                    app:layout_constraintVertical_bias="0.05" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/one000"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="@drawable/no_color_shadow"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintDimensionRatio="0.85:1"
+                app:layout_constraintStart_toStartOf="@+id/divider_0030"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/padding_BR1_01"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    app:layout_constraintDimensionRatio="1:1"
+                    app:layout_constraintEnd_toEndOf="@+id/padding_BR1_03"
+                    app:layout_constraintStart_toStartOf="@+id/padding_BR1_03"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/padding_BR1_02"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintDimensionRatio="1:1"
+                    app:layout_constraintEnd_toEndOf="@id/padding_BR1_01"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/padding_BR1_03"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    app:layout_constraintBottom_toTopOf="@id/padding_BR1_02"
+                    app:layout_constraintDimensionRatio="1:14.79"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/padding_BR1_01" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/padding_BR1_04"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    app:layout_constraintBottom_toTopOf="@id/padding_BR1_02"
+                    app:layout_constraintDimensionRatio="1:14.79"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/padding_BR1_01" />
+
+                <ImageView
+                    android:id="@+id/BR1"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:alpha="0.9"
+                    app:layout_constraintBottom_toTopOf="@id/padding_BR1_02"
+                    app:layout_constraintEnd_toStartOf="@id/padding_BR1_04"
+                    app:layout_constraintStart_toEndOf="@id/padding_BR1_01"
+                    app:layout_constraintTop_toBottomOf="@id/padding_BR1_01" />
+
+                <TextView
+                    android:id="@+id/BR1_t"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-black"
+                    android:letterSpacing="@string/spacing"
+                    android:text="@string/install"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/textSize"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/padding_BR1_01"
+                    app:layout_constraintVertical_bias="0.05" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintDimensionRatio="30:1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.5260">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/contacts_hint_layout"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:visibility="invisible"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintEnd_toEndOf="@+id/contact">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/hint"
+                        android:backgroundTint="#E6513D63"
+                        android:fontFamily="sans-serif"
+                        android:gravity="center"
+                        android:text="@string/add_contact"
+                        android:textColor="@android:color/white"
+                        android:textSize="5sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/gallery_hint_layout"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:visibility="invisible"
+                    app:layout_constraintStart_toStartOf="@id/menu"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/hint_reversed"
+                        android:backgroundTint="#E6513D63"
+                        android:fontFamily="sans-serif"
+                        android:gravity="center"
+                        android:text="@string/gallery"
+                        android:textColor="@android:color/white"
+                        android:textSize="5sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <pl.droidsonroids.gif.GifImageView
+                    android:id="@+id/wave"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:backgroundTint="#68527e"
+                    android:background="@drawable/circle"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintDimensionRatio="1:1"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.6080"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <pl.droidsonroids.gif.GifImageButton
+                    android:id="@+id/contact"
+                    style="@style/Widget.AppCompat.Button.Borderless"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:background="@drawable/contact"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintDimensionRatio="1:1"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.6080"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <pl.droidsonroids.gif.GifImageView
+                    android:id="@+id/menu_wave"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:backgroundTint="#68527e"
+                    android:background="@drawable/circle"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintDimensionRatio="1:1"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.392"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <pl.droidsonroids.gif.GifImageButton
+                    android:id="@+id/menu"
+                    style="@style/Widget.AppCompat.Button.Borderless"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:background="@drawable/icon_grid"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintDimensionRatio="1:1"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.392"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintDimensionRatio="13.39:1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/transition_distance_right"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintDimensionRatio="3.00:1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/transition_distance_left"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintDimensionRatio="6.05:1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/transition_distance_cycle"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintDimensionRatio="9.05:1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/text_anim"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.95" >
+
+        <TextView
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:textColor="#E6513D63"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/trench"
+            android:text="chashchin.dev"
+            android:textSize="20dp" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ImageView
+        android:id="@+id/front_expanded_image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible"
+        app:layout_constraintDimensionRatio="4:5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

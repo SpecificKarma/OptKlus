@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="zoom" translatable="false">3.0</string>
+    <dimen name="textSize">18sp</dimen>
+    <integer name="columns">3</integer>
+    <string name="top_bias" translatable="false">0.2491</string>
+    <string name="bottom_bias" translatable="false">0.750</string>
+</resources>

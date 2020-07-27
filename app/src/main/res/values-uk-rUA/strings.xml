@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">OptimumKlus</string>
+    <string name="design">ДИЗАЙН</string>
+    <string name="repair">РЕМОНТ</string>
+    <string name="install">МОНТАЖ</string>
+    <string name="place">ЗБIР</string>
+    <string name="success">ВДАЛО</string>
+    <string name="next">ДАЛI</string>
+    <string name="cancel">ВIДМIНИТИ</string>
+    <string name="add_phone_number_to_contacts">ДОДАТИ НОМЕР ДО КОНТАКТIВ ТЕЛЕФОНУ?</string>
+    <string name="paint">ФАРБУВАННЯ</string>
+    <string name="find_me">КОНТАКТ ДОДАНИЙ</string>
+    <string name="gallery">ПОРТФОЛIО</string>
+    <string name="spacing">-0.1</string>
+    <string name="garden">САД</string>
+    <string name="add_contact">КОНТАКТИ</string>
+    <string name="shareLink">ПОДІЛИТИСЯ ДОДАТКОМ:</string>
+</resources>

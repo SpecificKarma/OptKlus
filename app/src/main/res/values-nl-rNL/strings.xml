@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">OptimumKlus</string>
+    <string name="design">ONTWERP</string>
+    <string name="repair">HERSTEL</string>
+    <string name="place">PLAATSEN</string>
+    <string name="install">MONTAGE</string>
+    <string name="success">SUCCES</string>
+    <string name="next">DE VOLGENDE</string>
+    <string name="cancel">ANNULEER</string>
+    <string name="add_phone_number_to_contacts">TELEFOONNUMMER TOEVOEGEN ALS CONTACT?</string>
+    <string name="paint">PAINT</string>
+    <string name="shareLink">DEEL MIJ:</string>
+    <string name="find_me">CONTACT TOEGEVOEGD</string>
+    <string name="gallery">GALERIJ</string>
+    <string name="spacing">0</string>
+    <string name="garden">TUINWERK</string>
+    <string name="add_contact">CONTACTEN</string>
+</resources>

@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">OptimumKlus</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="design">DESIGN</string>
+    <string name="repair">REPAIR</string>
+    <string name="place">PLACE</string>
+    <string name="install">INSTALL</string>
+    <string name="add_phone_number_to_contacts">ADD PHONE NUMBER AS CONTACT?</string>
+    <string name="next">NEXT</string>
+    <string name="cancel">CANCEL</string>
+    <string name="success">SUCCESS</string>
+    <string name="paint">PAINT</string>
+    <string name="shareLink">SHARE ME:</string>
+    <string name="find_me">CONTACT ADDED</string>
+    <string name="gallery">GALLERY</string>
+    <string name="spacing">0</string>
+    <string name="garden">GARDEN</string>
+    <string name="add_contact">CONTACTS</string>
+    <!-- TODO: Remove or change this placeholder text -->
+
+</resources>

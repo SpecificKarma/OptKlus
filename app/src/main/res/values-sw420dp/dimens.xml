@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="zoom">3.0</string>
+    <dimen name="textSize">18sp</dimen>
+    <integer name="columns">4</integer>
+
+</resources>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/cards"
+    tools:ignore="UnusedNavigation">
+
+    <fragment
+        android:id="@+id/cards"
+        android:name="com.specifikarma.optimumklus.UI.card.Cards"
+        android:label="cards"
+        tools:layout="@layout/front" >
+
+        <action
+            android:id="@+id/action_cards_to_backCard"
+            app:destination="@id/backCard"
+            app:enterAnim="@animator/card_flip_right_in"
+            app:exitAnim="@animator/card_flip_right_out"
+            app:popEnterAnim="@animator/card_flip_left_in"
+            app:popExitAnim="@animator/card_flip_left_out"/>
+    </fragment>
+    <fragment
+        android:id="@+id/backCard"
+        android:name="com.specifikarma.optimumklus.UI.gallery.GridGallery"
+        android:label="fragment_back_card"
+        tools:layout="@layout/back" >
+        <action
+            android:id="@+id/action_cards_to_backCard"
+            app:enterAnim="@animator/card_flip_right_in"
+            app:exitAnim="@animator/card_flip_right_out"
+            app:popEnterAnim="@animator/card_flip_left_in"
+            app:popExitAnim="@animator/card_flip_left_out"/>
+    </fragment>
+</navigation>
