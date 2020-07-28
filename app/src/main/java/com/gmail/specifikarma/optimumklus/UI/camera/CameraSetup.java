@@ -319,11 +319,9 @@ public class CameraSetup extends Fragment implements View.OnClickListener {
                         paint_me.setOnTouchListener(new View.OnTouchListener() {
                             @Override
                             public boolean onTouch(View view, MotionEvent motionEvent) {
-                                if (!isFlash) {
+
                                     runFadeAnim(view.getRootView(), new int[]{R.id.mode_draw_fade}, 0, 300, false);
                                     runFadeAnim(view.getRootView(), new int[]{R.id.undo_fade}, 0, 300, true);
-                                    isFlash = !isFlash;
-                                }
 
                                 return paint_me.touchEvent(motionEvent);
                             }

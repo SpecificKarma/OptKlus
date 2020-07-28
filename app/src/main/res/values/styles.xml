@@ -5,7 +5,7 @@
         <item name="colorPrimary">#322045</item>
         <item name="android:windowTranslucentStatus">true</item>
         <item name="android:windowTranslucentNavigation">true</item>
-        <item name="android:windowFullscreen">false</item>
+        <item name="android:windowFullscreen">true</item>
         <item name="android:windowDisablePreview">true</item>
     </style>
 
