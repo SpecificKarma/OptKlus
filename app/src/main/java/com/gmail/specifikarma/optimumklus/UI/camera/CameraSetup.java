@@ -76,7 +76,6 @@ import static android.content.ContentValues.TAG;
 
 public class CameraSetup extends Fragment implements View.OnClickListener {
 
-    private boolean isFlash, hasImage;
     private CameraSelector cameraSelector;
     private DrawImageView paint_me;
     private Executor executor = Executors.newSingleThreadExecutor();

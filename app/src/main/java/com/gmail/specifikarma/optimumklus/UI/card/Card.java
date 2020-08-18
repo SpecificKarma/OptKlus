@@ -113,12 +113,4 @@ public class Card extends HintAndCard {
                     }
                 }).create().show();
     }
-
-    private void runCycle(View view) {
-        ObjectAnimator anim1 = ObjectAnimator.ofFloat(view, "translationX", view.getTranslationX() + 0);
-        anim1.setInterpolator(new LinearInterpolator());
-        anim1.setRepeatCount(ValueAnimator.INFINITE);
-        anim1.setDuration(25000);
-        anim1.start();
-    }
 }

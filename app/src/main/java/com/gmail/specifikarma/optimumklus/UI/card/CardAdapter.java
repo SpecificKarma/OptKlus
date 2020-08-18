@@ -1,6 +1,7 @@
 package com.gmail.specifikarma.optimumklus.UI.card;
 
 import android.content.Context;
+import android.graphics.drawable.Drawable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -65,30 +66,31 @@ public class CardAdapter extends RecyclerView.Adapter<CardAdapter.PagerViewHolde
     @Override
     public void onBindViewHolder(@NonNull PagerViewHolder holder, int position) {
 
-        String work, desc;
+        Drawable work;
+        String desc;
         switch (position) {
             case 0:
-                work = settings.getDesign();
+                work = context.getDrawable(R.drawable.images_cover_design_attic);
                 desc = context.getString(R.string.design);
                 break;
             case 1:
-                work = settings.getGarden();
+                work = context.getDrawable(R.drawable.images_cover_landscaping_trees);
                 desc = context.getString(R.string.garden);
                 break;
             case 2:
-                work = settings.getInstall();
+                work = context.getDrawable(R.drawable.images_cover_install_floor);
                 desc = context.getString(R.string.install);
                 break;
             case 3:
-                work = settings.getPaint();
+                work = context.getDrawable(R.drawable.images_cover_wall_paint);
                 desc = context.getString(R.string.paint);
                 break;
             case 4:
-                work = settings.getPlace();
+                work = context.getDrawable(R.drawable.images_cover_placing_appliance);
                 desc = context.getString(R.string.place);
                 break;
             case 5:
-                work = settings.getRepair();
+                work = context.getDrawable(R.drawable.images_cover_repair_tile);
                 desc = context.getString(R.string.repair);
                 break;
             default:
@@ -97,7 +99,6 @@ public class CardAdapter extends RecyclerView.Adapter<CardAdapter.PagerViewHolde
 
             Glide.with(holder.card01.getContext())
                     .load(work)
-                    .transition(DrawableTransitionOptions.withCrossFade(200))
                     .into(holder.card01);
 
             holder.title01.setText(desc);

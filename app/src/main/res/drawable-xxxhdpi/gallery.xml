@@ -6,7 +6,7 @@
             <inset android:inset="2dp">
                 <shape
                     android:shape="oval"
-                    android:tint="#80564868" />
+                    android:tint="#67557d" />
             </inset>
         </item>
         <item >

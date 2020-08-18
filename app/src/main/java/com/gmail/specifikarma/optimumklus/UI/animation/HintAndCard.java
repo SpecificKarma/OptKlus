@@ -45,7 +45,6 @@ public class HintAndCard extends AddContact {
             servicesAnim(view, 11000);
             Preferences.save("IS_SHOWN", true, getContext());
         }
-
         if (!isPlayed && isShown) {
             runMoveAnim(view, R.layout.frame_logo, 2000, 500);
             finishedAnim(view);
@@ -54,7 +53,7 @@ public class HintAndCard extends AddContact {
             constraintSet.clone(getContext(), R.layout.frame_finish);
             constraintSet.applyTo(main);
             for (int id : new int[]{R.id.gallery_fade, R.id.gallery_desc_fade, R.id.estimation_fade,
-                    R.id.estimation_desc_fade, R.id.contacts_fade, R.id.contacts_desc_fade, R.id.services_fade}) {
+                    R.id.estimation_desc_fade, R.id.contacts_fade, R.id.contacts_desc_fade, R.id.services_fade, R.id.buttons_fade}) {
                 try {
                     view.findViewById(id).setVisibility(View.VISIBLE);
                 } catch (RuntimeException e) {
@@ -139,12 +138,14 @@ public class HintAndCard extends AddContact {
         runFadeAnim(view, new int[]{ R.id.services_fade},
                 startTime + 500, 500, true);
 
+        runFadeAnim(view, new int[]{ R.id.buttons_fade},
+                startTime + 500, 500, true);
     }
 
     private void finishedAnim(@NonNull View view) {
         runMoveAnim(view, R.layout.frame_finish, 2000, 500);
         runFadeAnim(view, new int[]{R.id.gallery_fade, R.id.gallery_desc_fade, R.id.estimation_fade,
-                        R.id.estimation_desc_fade, R.id.contacts_fade, R.id.contacts_desc_fade, R.id.services_fade},
+                        R.id.estimation_desc_fade, R.id.contacts_fade, R.id.contacts_desc_fade, R.id.services_fade, R.id.buttons_fade},
                 2000 + 500, 500, true);
     }
 

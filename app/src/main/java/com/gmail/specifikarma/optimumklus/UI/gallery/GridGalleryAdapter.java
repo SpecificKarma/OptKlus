@@ -39,7 +39,6 @@ public class GridGalleryAdapter extends BaseAdapter {
 
         if (convertView == null) {
             imageView = new ImageView(mContext);
-
             imageView.setAdjustViewBounds(true);
             imageView.setPadding(2, 2, 2, 2);
         } else {

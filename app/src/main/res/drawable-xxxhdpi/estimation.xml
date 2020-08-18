@@ -5,7 +5,7 @@
             <inset android:inset="2dp">
                 <shape
                     android:shape="rectangle"
-                    android:tint="#80564868">
+                    android:tint="#67557d">
                     <corners android:radius="25dp" />
                 </shape>
             </inset>

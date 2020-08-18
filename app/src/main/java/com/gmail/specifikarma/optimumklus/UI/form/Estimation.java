@@ -40,14 +40,12 @@ import com.google.android.material.chip.Chip;
 public class Estimation extends Fragment implements View.OnClickListener {
     private int REQUEST_CODE_PERMISSIONS = 1002;
     private final String[] REQUIRED_PERMISSIONS = new String[]{"android.permission.READ_PHONE_STATE"};
-    private EditText name;
-    private EditText phone;
+    private EditText name, phone;
     private TextView auto;
     private Button camera;
     private View phoneError, nameError, estimationError;
     private TelephonyManager tMgr;
-    private Button estimation;
-    private ConstraintLayout main, estimation_form, shade;
+    private ConstraintLayout main;
     private ConstraintSet constraintSet = new ConstraintSet();
     private boolean isChipped;
     private Form form = new Form();
@@ -63,21 +61,16 @@ public class Estimation extends Fragment implements View.OnClickListener {
         phoneError = view.findViewById(R.id.phoneLine);
         auto = view.findViewById(R.id.auto);
         camera = view.findViewById(R.id.start_camera);
-        estimation = view.findViewById(R.id.estimation);
         estimationError = view.findViewById(R.id.chipLine);
         main = view.findViewById(R.id.main);
-        estimation_form = view.findViewById(R.id.estimation_form);
-        shade = view.findViewById(R.id.shade_fade);
 
         for (int id : new int[]{R.id.chip0, R.id.chip1, R.id.chip2,
                 R.id.chip3, R.id.chip4, R.id.chip5}) {
             ((Chip) view.findViewById(id)).setOnClickListener(this);
         }
 
-        shade.setOnClickListener(this);
         auto.setOnClickListener(this);
         camera.setOnClickListener(this);
-        estimation.setOnClickListener(this);
     }
 
     @Nullable
@@ -89,12 +82,6 @@ public class Estimation extends Fragment implements View.OnClickListener {
     @Override
     public void onClick(View view) {
         switch (view.getId()) {
-            case R.id.estimation:
-                runFadeAnim(view.getRootView(), R.id.shade_fade,
-                        0, 300, true);
-                runMoveAnim(view.getRootView(), R.layout.frame_estimation_open,
-                        0, 300);
-                break;
             case R.id.start_camera:
                 if (checkName() & checkPhone() & checkChips(view.getRootView())) {
                     String formToJson = Util.getGsonParser().toJson(form);
@@ -106,12 +93,6 @@ public class Estimation extends Fragment implements View.OnClickListener {
             case R.id.auto:
                 requestPermissions(REQUIRED_PERMISSIONS, REQUEST_CODE_PERMISSIONS);
                 break;
-            case R.id.shade_fade:
-                runMoveAnim(view.getRootView(), R.layout.frame_estimation_closed,
-                        0, 300);
-
-                runFadeAnim(view.getRootView(), R.id.shade_fade,
-                        0, 300, false);
         }
     }
 
@@ -137,6 +118,7 @@ public class Estimation extends Fragment implements View.OnClickListener {
     }
 
     private boolean checkChips(View view) {
+        form.getServices().clear();
         for (int id : new int[]{R.id.chip0, R.id.chip1, R.id.chip2,
                 R.id.chip3, R.id.chip4, R.id.chip5}) {
             if (((Chip) view.findViewById(id)).isChecked()) {
