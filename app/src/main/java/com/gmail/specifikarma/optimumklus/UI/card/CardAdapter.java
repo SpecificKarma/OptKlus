@@ -99,6 +99,8 @@ public class CardAdapter extends RecyclerView.Adapter<CardAdapter.PagerViewHolde
 
             Glide.with(holder.card01.getContext())
                     .load(work)
+                    .diskCacheStrategy(DiskCacheStrategy.ALL)
+                    .transition(DrawableTransitionOptions.withCrossFade(200))
                     .into(holder.card01);
 
             holder.title01.setText(desc);
